@@ -28,34 +28,34 @@ namespace ORM_Dapper
             new { id = id });
         }
 
-        public void UpdateProduct(Product product)
-        {
-            _conn.Execute("update products " +
-                          "set Name = @name, " +
-                          "Price = @price, " +
-                          "CategoryID = @catID, " +
-                          "OnSAle = @onSAle, " +
-                          "StockLevel = @stock",
-                          new
-                          {
-                              name = product.Name,
-                              price = product.Price,
-                              catID = product.CategoryID,
-                              onSale = product.OnSale,
-                              stock = product.StockLevel
-                          });
+        //public void UpdateProduct(Product product)
+        //{
+        //    _conn.Execute("update products " +
+        //                  "set Name = @name, " +
+        //                  "Price = @price, " +
+        //                  "CategoryID = @catID, " +
+        //                  "OnSAle = @onSAle, " +
+        //                  "StockLevel = @stock",
+        //                  new
+        //                  {
+        //                      name = product.Name,
+        //                      price = product.Price,
+        //                      catID = product.CategoryID,
+        //                      onSale = product.OnSale,
+        //                      stock = product.StockLevel
+        //                  });
 
 
         }
-        public void DeleteProduct(int id)
-        {
-            //throw new NotImplementedException();
-            ////_conn.Execute("delete from Name where ProductID = @id;" new { id = id });
-            ////_conn.Execute("delete from Price where ProductID = @id;" new { id = id });
-            _conn.Execute("delete from Sales where ProductID = @id;", new { id2 = id });
-            _conn.Execute("delete from Products where ProductID = @id;", new { id2 = id });
-            _conn.Execute("delete from Reviews where ProductID = @id;", new { id2 = id });
+        //public void DeleteProduct(int id)
+        //{
+        //    //throw new NotImplementedException();
+        //    ////_conn.Execute("delete from Name where ProductID = @id;" new { id = id });
+        //    ////_conn.Execute("delete from Price where ProductID = @id;" new { id = id });
+        //    _conn.Execute("delete from Sales where ProductID = @id;", new { id2 = id });
+        //    _conn.Execute("delete from Products where ProductID = @id;", new { id2 = id });
+        //    _conn.Execute("delete from Reviews where ProductID = @id;", new { id2 = id });
             //    _conn.Execute(DeletedRowInaccessibleException fom)     What is DeletedRowInacessibleExcemtion from ?
         }
-    }
-}
+    
+

@@ -32,9 +32,9 @@ namespace ORM_Dapper
             productUpdate.ProductID = 1;
             productUpdate.Price = 4000;
 
-            productRepo.UpdateProduct(productUpdate);
+            //productRepo.UpdateProduct(productUpdate);
             
-            productRepo.UpdateProduct(productUpdate);
+            //productRepo.UpdateProduct(productUpdate);
 
             var products = productRepo.GetAll();
 
